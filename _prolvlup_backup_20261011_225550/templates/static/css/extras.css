@@ -1,0 +1,90 @@
+/* ============================================================
+   Extra components — token steps, providers, file pick, admin rows
+   ============================================================ */
+
+.hint{font-size:11.5px;color:var(--faint);line-height:1.5}
+.hint b{color:var(--muted);font-weight:700}
+.sub{font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:2px 0 2px}
+.when{font-size:10.5px;color:var(--faint);font-family:var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46%}
+.gained{color:var(--ok);font-weight:750;margin-left:6px}
+
+/* ---------- numbered steps ---------- */
+.steps{display:flex;flex-direction:column;gap:9px;padding:14px;border-radius:var(--r-sm);
+  background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.step{display:flex;gap:11px;align-items:flex-start}
+.step .n{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-family:var(--mono);font-size:11px;font-weight:800;background:var(--accent-soft);color:var(--accent);
+  border:1px solid rgba(255,138,31,.3)}
+.step p{font-size:12.3px;color:var(--text-2);line-height:1.5}
+.step code{font-family:var(--mono);font-size:11.5px;background:rgba(255,255,255,.07);padding:1px 6px;border-radius:6px;color:var(--accent-2)}
+
+/* ---------- providers ---------- */
+.providers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.prov{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  padding:14px 8px;border-radius:var(--r-sm);border:1px solid var(--line);background:rgba(255,255,255,.03);
+  color:var(--text-2);font-size:11.5px;font-weight:700;cursor:pointer;transition:.18s;text-align:center}
+.prov i{font-size:19px;color:var(--muted);transition:.18s}
+.prov:hover{border-color:rgba(255,138,31,.5);background:var(--accent-soft);color:#fff;transform:translateY(-2px)}
+.prov:hover i{color:var(--accent)}
+
+/* ---------- file picker ---------- */
+.filepick{display:flex;align-items:center;gap:9px;padding:11px 13px;border-radius:var(--r-sm);
+  border:1px dashed var(--line-2);background:rgba(255,255,255,.02);color:var(--muted);font-size:12px}
+.filepick i{color:var(--accent)}
+.filepick input[type=file]{flex:1;min-width:0;font-size:11.5px;color:var(--muted)}
+.filepick input[type=file]::file-selector-button{
+  margin-right:10px;padding:6px 12px;border-radius:8px;border:1px solid var(--line-2);
+  background:rgba(255,255,255,.06);color:var(--text);font-weight:650;font-size:11.5px;cursor:pointer}
+
+/* ---------- token output ---------- */
+.tok-out{display:none;flex-direction:column;gap:1px;border-radius:var(--r-sm);border:1px solid var(--line);
+  background:rgba(255,255,255,.025);overflow:hidden}
+.tok-out.on{display:flex;animation:fadeUp .3s var(--ease) both}
+.kv{display:flex;align-items:center;gap:12px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.kv .k{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);flex:none;width:92px}
+.kv .v{font-family:var(--mono);font-size:12.5px;color:var(--text);word-break:break-all;flex:1;min-width:0}
+.kv .v#tk-tok{color:var(--accent-2)}
+.tok-actions{display:flex;gap:8px;padding:12px 14px}
+.tok-actions .btn{flex:1}
+.copy-mini{width:32px;height:32px;flex:none;border-radius:9px;border:1px solid var(--line);
+  background:rgba(255,255,255,.05);color:var(--muted);cursor:pointer;transition:.18s}
+.copy-mini:hover{color:var(--text);background:rgba(255,255,255,.09)}
+
+/* ---------- admin list ---------- */
+.userlist{display:flex;flex-direction:column;gap:9px}
+.userlist .msg{color:var(--faint);font-size:12px;margin:0}
+.ustat{font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:99px;flex:none}
+.ustat.ok{background:var(--ok-soft);color:var(--ok)}
+.ustat.bad{background:var(--bad-soft);color:var(--bad)}
+.quota{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+.uacts{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.mini-btn{padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:rgba(255,255,255,.04);
+  color:var(--text-2);font-size:11px;font-weight:650;cursor:pointer;transition:.18s;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.mini-btn i{font-size:10px}
+.mini-btn:hover{background:rgba(255,255,255,.09);color:var(--text)}
+.mini-btn.danger{color:var(--bad);border-color:rgba(239,77,90,.28)}
+.mini-btn.danger:hover{background:var(--bad-soft)}
+.mini-btn.on{border-color:rgba(46,204,143,.3);color:var(--ok);background:var(--ok-soft)}
+
+/* ---------- admin row (new) ---------- */
+.arow{display:flex;align-items:center;gap:12px;padding:12px;border-radius:var(--r-sm);
+  border:1px solid var(--line);background:rgba(255,255,255,.03)}
+.uav{width:36px;height:36px;border-radius:11px;flex:none;display:grid;place-items:center;font-weight:800;font-size:14px;
+  background:var(--grad-info);color:#04121f;text-transform:uppercase}
+.uinfo{min-width:0;flex:1}
+.uinfo b{font-size:13.5px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.uinfo .meta{font-size:11px;color:var(--muted);font-family:var(--mono);margin-top:2px}
+
+@media (max-width:520px){
+  .uacts{width:100%;justify-content:flex-start}
+  .arow{flex-wrap:wrap}
+  .providers{grid-template-columns:repeat(2,1fr)}
+  .choices{grid-template-columns:1fr}
+  .kv .k{width:74px}
+}
+
+/* ---------- account grid "show more" ---------- */
+.accounts-more{display:flex;justify-content:center;padding:0 16px 16px}
+.accounts-more:empty{display:none}
+.accounts-more .btn{min-width:240px}
+.accounts-more .muted{font-weight:600;font-size:12px}

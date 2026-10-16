@@ -1,0 +1,477 @@
+
+[96m+==========================================================+[0m
+[96m|[0m                                                          [96m|[0m
+[96m|[0m[1m[95m           MASTER OFFICIAL - AUTO LEVEL UP BOT            [0m[96m|[0m
+[96m|[0m[2m               Lone Wolf Mode | IND Region                [0m[96m|[0m
+[96m|[0m                                                          [96m|[0m
+[96m|[0m[92m                 Telegram: @master_ff_01                  [0m[96m|[0m
+[96m|[0m[97m            Dashboard: http://localhost:20030             [0m[96m|[0m
+[96m|[0m                                                          [96m|[0m
+[96m+==========================================================+[0m
+
+
+[96m============================================================[0m
+[1m[96m                       CONFIGURATION                        [0m
+[96m============================================================[0m
+
+[96m[ INFO  ][0m Start Match Interval : 4.0-8.0s (random)
+[96m[ INFO  ][0m Offline Wait         : 6.0s
+[96m[ INFO  ][0m Non-match Reconnect  : 1.0s
+[96m[ INFO  ][0m Cache Invalidation   : 5x failures
+[96m[ INFO  ][0m Parallel Matches     : UNLIMITED (background)
+[96m[ INFO  ][0m Cache TTL            : 1200s (20 min)
+[96m[ INFO  ][0m HUMAN MODE           : ON
+[96m[ INFO  ][0m FORCED REGION        : IND
+[92m[+] Restored: 0 login(s), 1 account(s), 1 active session(s)[0m
+[92m[+] Dashboard running on http://localhost:20030[0m
+[92m[+] Max Accounts: 10000[0m
+[92m[+] Login required — admin user: admin[0m
+[92m[   OK  ][0m Web Dashboard live -> http://localhost:20030
+
+[96m============================================================[0m
+[1m[96m                     LOADING 1 ACCOUNTS                     [0m
+[96m============================================================[0m
+
+[92m[   OK  ][0m All 1 accounts launched
+[96m[ INFO  ][0m Watching for matches... (wait 2-5 minutes)
+[95m[ LOGIN ][0m Starting login for Guest UID: 4281923512
+[95m[ CACHE ][0m Loaded UID 13825466647 | VINOXᅠ²⁹³⁴⁴ | Lvl 4 | EXP: 643
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #1 -> UDP starting -> 104.166.185.118:10016
+[92m[ MATCH ][0m [MATCH #1] UDP connected -> 104.166.185.118:10016
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #1] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #2 -> UDP starting -> 98.98.221.100:10018
+[92m[ MATCH ][0m [MATCH #2] UDP connected -> 98.98.221.100:10018
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #2] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #3 -> UDP starting -> 98.98.140.114:10016
+[92m[ MATCH ][0m [MATCH #3] UDP connected -> 98.98.140.114:10016
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #3] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #4 -> UDP starting -> 98.98.221.226:10015
+[92m[ MATCH ][0m [MATCH #4] UDP connected -> 98.98.221.226:10015
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #4] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #5 -> UDP starting -> 154.206.73.245:10018
+[92m[ MATCH ][0m [MATCH #5] UDP connected -> 154.206.73.245:10018
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #5] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #6 -> UDP starting -> 154.206.73.210:10017
+[92m[ MATCH ][0m [MATCH #6] UDP connected -> 154.206.73.210:10017
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #6] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #7 -> UDP starting -> 104.166.185.98:10017
+[92m[ MATCH ][0m [MATCH #7] UDP connected -> 104.166.185.98:10017
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #7] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #8 -> UDP starting -> 154.206.73.98:10017
+[92m[ MATCH ][0m [MATCH #8] UDP connected -> 154.206.73.98:10017
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #8] Thunder+Sharma sent OK
+[92m[  EXP  ][0m +241 EXP | UID: 13825466647 | Lvl 4 (0% - 0 to Lvl 5)
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #9 -> UDP starting -> 98.98.140.102:10017
+[92m[ MATCH ][0m [MATCH #9] UDP connected -> 98.98.140.102:10017
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #9] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #10 -> UDP starting -> 154.206.73.87:10016
+[92m[ MATCH ][0m [MATCH #10] UDP connected -> 154.206.73.87:10016
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #10] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #11 -> UDP starting -> 98.98.221.222:10016
+[92m[ MATCH ][0m [MATCH #11] UDP connected -> 98.98.221.222:10016
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #11] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #12 -> UDP starting -> 104.166.133.218:10017
+[92m[ MATCH ][0m [MATCH #12] UDP connected -> 104.166.133.218:10017
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #12] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #13 -> UDP starting -> 154.206.73.79:10015
+[92m[ MATCH ][0m [MATCH #13] UDP connected -> 154.206.73.79:10015
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #13] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #14 -> UDP starting -> 98.98.221.100:10016
+[92m[ MATCH ][0m [MATCH #14] UDP connected -> 98.98.221.100:10016
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #14] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #15 -> UDP starting -> 98.98.140.4:10015
+[92m[ MATCH ][0m [MATCH #15] UDP connected -> 98.98.140.4:10015
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #15] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #16 -> UDP starting -> 154.206.73.117:10015
+[92m[ MATCH ][0m [MATCH #16] UDP connected -> 154.206.73.117:10015
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #16] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #8] Finished naturally
+[96m[ INFO  ][0m [MATCH #8] Closed | UID active: 15 | Total active: 15
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #16 -> UDP starting -> 104.166.133.22:10016
+[92m[ MATCH ][0m [MATCH #16] UDP connected -> 104.166.133.22:10016
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #16] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[  EXP  ][0m +13 EXP | UID: 13825466647 | Lvl 4 (0% - 0 to Lvl 5)
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #17 -> UDP starting -> 104.166.133.218:10017
+[92m[ MATCH ][0m [MATCH #17] UDP connected -> 104.166.133.218:10017
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #18 -> UDP starting -> 154.206.73.117:10016
+[92m[ MATCH ][0m [MATCH #18] UDP connected -> 154.206.73.117:10016
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #18] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #19 -> UDP starting -> 154.206.73.123:10017
+[92m[ MATCH ][0m [MATCH #19] UDP connected -> 154.206.73.123:10017
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #19] Thunder+Sharma sent OK
+[93m[  WARN ][0m [MATCH #17] Handshake timeout
+[96m[ INFO  ][0m [MATCH #17] Closed | UID active: 18 | Total active: 18
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m Match #19 -> UDP starting -> 104.166.132.10:10017
+[92m[ MATCH ][0m [MATCH #19] UDP connected -> 104.166.132.10:10017
+[96m[ INFO  ][0m Offline 6.0s -> reload token -> new StartMatch
+[92m[ MATCH ][0m [MATCH #19] Thunder+Sharma sent OK
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[92m[ MATCH ][0m [MATCH #11] Finished naturally
+[96m[ INFO  ][0m [MATCH #11] Closed | UID active: 18 | Total active: 18
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[92m[ MATCH ][0m [MATCH #16] Finished naturally
+[92m[ MATCH ][0m [MATCH #15] Finished naturally
+[96m[ INFO  ][0m [MATCH #16] Closed | UID active: 17 | Total active: 17
+[96m[ INFO  ][0m [MATCH #15] Closed | UID active: 16 | Total active: 16
+[92m[ MATCH ][0m [MATCH #4] Finished naturally
+[92m[ MATCH ][0m [MATCH #3] Finished naturally
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[ INFO  ][0m [MATCH #4] Closed | UID active: 15 | Total active: 15
+[96m[ INFO  ][0m [MATCH #3] Closed | UID active: 14 | Total active: 14
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #14] Finished naturally
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m [MATCH #14] Closed | UID active: 13 | Total active: 13
+[92m[ MATCH ][0m ==================================================
+[92m[ MATCH ][0m MATCH FOUND! UID: 13825466647
+[92m[ MATCH ][0m ==================================================
+[93m[  WARN ][0m Non-match big packet (#1/5) -> reconnecting
+[92m[  EXP  ][0m +250 EXP | UID: 13825466647 | Lvl 5 (0% - 0 to Lvl 6)
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[92m[ MATCH ][0m [MATCH #7] Finished naturally
+[96m[ INFO  ][0m [MATCH #7] Closed | UID active: 12 | Total active: 12
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #16] Finished naturally
+[96m[ INFO  ][0m [MATCH #16] Closed | UID active: 11 | Total active: 11
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #9] Finished naturally
+[96m[ INFO  ][0m [MATCH #9] Closed | UID active: 10 | Total active: 10
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #10] Finished naturally
+[96m[ INFO  ][0m [MATCH #10] Closed | UID active: 9 | Total active: 9
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #6] Finished naturally
+[96m[ INFO  ][0m [MATCH #6] Closed | UID active: 8 | Total active: 8
+[92m[ MATCH ][0m [MATCH #1] Finished naturally
+[96m[ INFO  ][0m [MATCH #1] Closed | UID active: 7 | Total active: 7
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #12] Finished naturally
+[96m[ INFO  ][0m [MATCH #12] Closed | UID active: 6 | Total active: 6
+[92m[  EXP  ][0m +253 EXP | UID: 13825466647 | Lvl 5 (0% - 0 to Lvl 6)
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #5] Finished naturally
+[96m[ INFO  ][0m [MATCH #5] Closed | UID active: 5 | Total active: 5
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[92m[ MATCH ][0m [MATCH #18] Finished naturally
+[96m[ INFO  ][0m [MATCH #18] Closed | UID active: 4 | Total active: 4
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[92m[ MATCH ][0m [MATCH #13] Finished naturally
+[96m[ INFO  ][0m [MATCH #13] Closed | UID active: 3 | Total active: 3
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[91m[  FAIL ][0m TCP state (13825466647): [WinError 121] The semaphore timeout period has expired
+[92m[ MATCH ][0m [MATCH #19] Finished naturally
+[96m[ INFO  ][0m [MATCH #19] Closed | UID active: 2 | Total active: 2
+[91m[  FAIL ][0m TCP state (13825466647): [WinError 121] The semaphore timeout period has expired
+[91m[  FAIL ][0m [GetLoginData] Exception: 
+[91m[  FAIL ][0m TCP state (13825466647): [WinError 121] The semaphore timeout period has expired
+[94m[  NET  ][0m TCP connected | UID: 13825466647 | Region: ME
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #19] Finished naturally
+[96m[ INFO  ][0m [MATCH #19] Closed | UID active: 1 | Total active: 1
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[  EXP  ][0m +187 EXP | UID: 13825466647 | Lvl 5 (0% - 0 to Lvl 6)
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[92m[ MATCH ][0m [MATCH #2] Finished naturally
+[96m[ INFO  ][0m [MATCH #2] Closed | UID active: 0 | Total active: 0
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...
+[96m[SEARCH ][0m LW Search Packet Sent (1280 bytes) | Region: ME
+[96m[ INFO  ][0m Match starting, please wait...

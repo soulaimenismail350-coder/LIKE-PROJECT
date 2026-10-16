@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="robots" content="noindex, nofollow">
+<title>FreeFire Level Bot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="/static/css/tokens.css?v=20261011a">
+<link rel="stylesheet" href="/static/css/layout.css?v=20261011a">
+<link rel="stylesheet" href="/static/css/components.css?v=20261011a">
+<link rel="stylesheet" href="/static/css/extras.css?v=20261011a">
+</head>
+<body>
+
+<div class="bg-aurora"></div>
+<div class="bg-grid"></div>
+
+<div class="app" id="top">
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside class="sidebar">
+    <div class="side-brand">
+      <div class="logo"><i class="fa-solid fa-bolt"></i></div>
+      <div>
+        <h1>FreeFire Bot</h1>
+        <p>Control Panel</p>
+      </div>
+    </div>
+
+    <div class="side-label">Menu</div>
+    <nav class="side-nav">
+      <a data-scroll="#top" class="on"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+      <a data-scroll="#accounts"><i class="fa-solid fa-id-card"></i> Accounts</a>
+      <a data-open="token"><i class="fa-solid fa-key"></i> Token Generator</a>
+      <a data-open="upload"><i class="fa-solid fa-file-import"></i> Upload Accounts</a>
+      <a data-open="admin" class="admin-only" style="display:none"><i class="fa-solid fa-user-shield"></i> Admin Panel</a>
+    </nav>
+
+    <div class="side-foot">
+      <div class="side-user">
+        <div class="av" id="user-initial">?</div>
+        <div class="who">
+          <b id="user-name">…</b>
+          <span id="user-role">Operator</span>
+        </div>
+        <button class="out" onclick="logout()" title="Sign out"><i class="fa-solid fa-right-from-bracket"></i></button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN ==================== -->
+  <div class="main">
+    <header class="topbar">
+      <div class="m-brand"><div class="logo"><i class="fa-solid fa-bolt"></i></div></div>
+
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="acc-search" placeholder="Search by UID, nickname, region…" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="top-actions">
+        <div class="chip-slots" title="Accounts used / allowed">
+          <i class="fa-solid fa-layer-group" style="color:var(--accent)"></i>
+          <b id="slot-used">0</b><span>/ <span id="slot-max">0</span></span>
+        </div>
+        <div class="live-dot" title="Bot online"></div>
+        <div class="clock" id="clock">--:--:--</div>
+        <button class="btn btn-primary btn-sm" onclick="openAdd()">
+          <i class="fa-solid fa-plus"></i> Add Account
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- PAGE HEAD -->
+      <div class="page-head">
+        <div>
+          <h2>The <span class="grad">Dashboard</span></h2>
+          <p>Live match-farming across every configured account.</p>
+        </div>
+        <div class="head-actions">
+          <button class="btn btn-ghost btn-sm" onclick="openTok()"><i class="fa-solid fa-key"></i> Token</button>
+          <button class="btn btn-ghost btn-sm" onclick="openUpload()"><i class="fa-solid fa-file-import"></i> Upload</button>
+          <button class="btn btn-ghost btn-sm admin-only" style="display:none" onclick="openAdmin()"><i class="fa-solid fa-user-gear"></i> Admin</button>
+          <button class="btn btn-ghost btn-sm" onclick="restartAll()"><i class="fa-solid fa-rotate"></i> Restart All</button>
+          <button class="btn btn-ghost btn-sm" style="color:var(--bad)" onclick="deleteAll()"><i class="fa-solid fa-trash"></i> Delete All</button>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <section class="stats">
+        <div class="stat">
+          <div class="stat-top">
+            <div class="stat-ico"><i class="fa-solid fa-users"></i></div>
+          </div>
+          <div class="stat-val" id="st-accounts">0</div>
+          <div class="stat-lbl">Accounts</div>
+          <div class="stat-sub">of <b id="st-max">0</b> slots used</div>
+        </div>
+        <div class="stat s-info">
+          <div class="stat-top">
+            <div class="stat-ico"><i class="fa-solid fa-crosshairs"></i></div>
+          </div>
+          <div class="stat-val" id="st-matches">0</div>
+          <div class="stat-lbl">Matches</div>
+          <div class="stat-sub">completed in total</div>
+        </div>
+        <div class="stat s-ok">
+          <div class="stat-top">
+            <div class="stat-ico"><i class="fa-solid fa-bolt"></i></div>
+          </div>
+          <div class="stat-val" id="st-exp">0</div>
+          <div class="stat-lbl">EXP Gained</div>
+          <div class="stat-sub">across all accounts</div>
+        </div>
+        <div class="stat s-warn">
+          <div class="stat-top">
+            <div class="stat-ico"><i class="fa-solid fa-gauge-high"></i></div>
+          </div>
+          <div class="stat-val" id="st-cap">50k</div>
+          <div class="stat-lbl">Daily Cap</div>
+          <div class="stat-sub">per account / day</div>
+        </div>
+      </section>
+
+      <!-- ACCOUNTS -->
+      <section class="panel" id="accounts">
+        <div class="panel-head">
+          <h3><i class="fa-solid fa-id-card"></i> Accounts</h3>
+          <span class="count-chip" id="acc-count">0 accounts</span>
+          <div class="filters">
+            <button class="on" data-f="all">All</button>
+            <button data-f="live">Live</button>
+            <button data-f="paused">Paused</button>
+          </div>
+          <div class="grow"></div>
+          <button class="btn btn-primary btn-sm" onclick="openAdd()"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+        <div class="accounts" id="acc-grid"></div>
+        <div class="empty" id="acc-empty">
+          <div class="ic"><i class="fa-solid fa-user-plus"></i></div>
+          <h4>No accounts yet</h4>
+          <p>Add a guest account with its UID and password, or paste a platform-4 access token. Each account keeps a persistent device fingerprint so it always looks the same.</p>
+          <button class="btn btn-primary" onclick="openAdd()"><i class="fa-solid fa-plus"></i> Add your first account</button>
+        </div>
+        <div class="accounts-more" id="acc-more"></div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- ==================== MOBILE NAV ==================== -->
+<nav class="mobile-nav">
+  <button class="on" data-scroll="#top"><i class="fa-solid fa-gauge-high"></i> Overview</button>
+  <button data-scroll="#accounts"><i class="fa-solid fa-id-card"></i> Accounts</button>
+  <button data-open="token"><i class="fa-solid fa-key"></i> Token</button>
+  <button data-open="add"><i class="fa-solid fa-circle-plus"></i> Add</button>
+</nav>
+
+<!-- ==================== ADD ACCOUNT ==================== -->
+<div class="overlay" id="add-overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="m-ic"><i class="fa-solid fa-user-plus"></i></div>
+      <div><h3>Add Account</h3><p>Start farming a new profile</p></div>
+      <button class="x" onclick="closeAdd()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <form id="add-form" onsubmit="return submitAdd(event)">
+      <div class="modal-body">
+        <div class="tabs">
+          <button type="button" id="tab-guest" class="on" onclick="pickType('guest')"><i class="fa-solid fa-user"></i> UID &amp; Password</button>
+          <button type="button" id="tab-token" onclick="pickType('token')"><i class="fa-solid fa-key"></i> Access Token</button>
+        </div>
+
+        <div id="f-guest" class="field-row">
+          <div class="field">
+            <label>Player UID</label>
+            <input id="in-uid" class="input mono" inputmode="numeric" placeholder="4085573226" autocomplete="off">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input id="in-pass" class="input mono" placeholder="guest password" autocomplete="off">
+          </div>
+        </div>
+
+        <div id="f-token" style="display:none">
+          <div class="field">
+            <label>Access Token</label>
+            <input id="in-token" class="input mono" placeholder="guest-grant token (platform 4)" autocomplete="off">
+            <div class="hint">Tokens from other login methods are rejected by the server.</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Match Mode</label>
+          <div class="choices single" id="modes">
+            <button type="button" class="choice on" data-m="AUTO">
+              <div class="ci"><i class="fa-solid fa-shuffle"></i></div>
+              <b>BR → LW <span class="tag">Auto</span></b>
+              <small>Battle Royale until Lv {{MODE_SWITCH_LEVEL}}, then Lone Wolf loop.</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Speed Mode</label>
+          <div class="choices" id="speeds">
+            <button type="button" class="choice on" data-s="SAFE">
+              <div class="ci"><i class="fa-solid fa-shield-halved"></i></div>
+              <b>Safe</b>
+              <small>Human-like pace · 30s queue, 50s offline gap.</small>
+            </button>
+            <button type="button" class="choice risk" data-s="RISK">
+              <div class="ci"><i class="fa-solid fa-rocket"></i></div>
+              <b>Risk <span class="tag">Fast</span></b>
+              <small>Fast farming · 8s queue, 3s offline gap.</small>
+            </button>
+          </div>
+          <div class="hint">Risk mode earns much more EXP per hour but raises exposure to the anti-abuse system.</div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Target Level <span class="hint">optional</span></label>
+            <input id="in-tlvl" class="input" inputmode="numeric" placeholder="MAX" autocomplete="off">
+          </div>
+          <div class="field">
+            <label>Target Matches <span class="hint">optional</span></label>
+            <input id="in-tmatch" class="input" inputmode="numeric" placeholder="∞" autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-foot">
+        <button type="button" class="btn btn-ghost" onclick="closeAdd()">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="add-submit"><i class="fa-solid fa-bolt"></i> Start farming</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ==================== TOKEN GENERATOR ==================== -->
+<div class="overlay" id="tok-overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="m-ic"><i class="fa-solid fa-key"></i></div>
+      <div><h3>Access Token Generator</h3><p>Convert an EAT into an access token</p></div>
+      <button class="x" onclick="closeTok()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="modal-body">
+      <div class="steps">
+        <div class="step"><div class="n">1</div><p>Pick a provider below — the <b>official Garena login</b> opens in a new tab.</p></div>
+        <div class="step"><div class="n">2</div><p>After signing in, the address bar contains <code>?eat=</code>. Copy the full URL.</p></div>
+        <div class="step"><div class="n">3</div><p>Paste it below and press <b>Generate</b> — the token is produced here.</p></div>
+      </div>
+
+      <div class="field">
+        <label>Provider login</label>
+        <div class="providers">
+          <a class="prov" data-p="1"><i class="fa-solid fa-gamepad"></i>Garena</a>
+          <a class="prov" data-p="8"><i class="fa-brands fa-google"></i>Google</a>
+          <a class="prov" data-p="3"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+          <a class="prov" data-p="10"><i class="fa-brands fa-apple"></i>Apple</a>
+          <a class="prov" data-p="11"><i class="fa-brands fa-x-twitter"></i>X</a>
+          <a class="prov" data-p="5"><i class="fa-brands fa-vk"></i>VK</a>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Callback URL or EAT</label>
+        <input id="in-eat" class="input mono" autocomplete="off" spellcheck="false" placeholder="https://…/?eat=850c3ca5…">
+        <div class="hint">Paste the whole link containing <b>?eat=</b>, or just the value after it.</div>
+      </div>
+
+      <div class="tok-out" id="tok-out">
+        <div class="kv"><span class="k">Nickname</span><span class="v" id="tk-nick">—</span></div>
+        <div class="kv"><span class="k">Account ID</span><span class="v" id="tk-uid">—</span></div>
+        <div class="kv"><span class="k">Region</span><span class="v" id="tk-reg">—</span></div>
+        <div class="kv"><span class="k">Token</span><span class="v" id="tk-tok">—</span></div>
+        <div class="tok-actions">
+          <button class="btn btn-ghost btn-sm" onclick="copyTok()"><i class="fa-solid fa-copy"></i> Copy token</button>
+          <button class="btn btn-primary btn-sm" onclick="useTok()"><i class="fa-solid fa-bolt"></i> Use token</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-foot">
+      <button class="btn btn-ghost" onclick="closeTok()">Cancel</button>
+      <button class="btn btn-primary" id="tok-go" onclick="genToken()"><i class="fa-solid fa-key"></i> Generate</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== UPLOAD ==================== -->
+<div class="overlay" id="up-overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="m-ic"><i class="fa-solid fa-file-import"></i></div>
+      <div><h3>Upload Accounts</h3><p>Bulk-add from a list</p></div>
+      <button class="x" onclick="closeUpload()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="modal-body">
+      <div class="field">
+        <label>One account per line — <span style="color:var(--accent)">UID:Password</span></label>
+        <textarea id="in-lines" class="input mono" spellcheck="false" placeholder="4085573226:0f3a9c…&#10;4085573227:7b21de…"></textarea>
+        <div class="filepick">
+          <i class="fa-solid fa-file-arrow-up"></i>
+          <span>or load a .txt file:</span>
+          <input type="file" id="in-file" accept=".txt,.csv,text/plain" onchange="pickFile(event)">
+        </div>
+        <div class="hint">UID and password separated by <b>:</b> or a space. Lines without both are skipped.</div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Target Level <span class="hint">optional</span></label>
+          <input id="in-up-tlvl" class="input" inputmode="numeric" placeholder="MAX" autocomplete="off">
+        </div>
+        <div class="field">
+          <label>Target Matches <span class="hint">optional</span></label>
+          <input id="in-up-tmatch" class="input" inputmode="numeric" placeholder="∞" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Speed Mode</label>
+        <div class="choices" id="up-speeds">
+          <button type="button" class="choice on" data-s="SAFE">
+            <div class="ci"><i class="fa-solid fa-shield-halved"></i></div>
+            <b>Safe</b>
+            <small>30s queue · 50s offline gap.</small>
+          </button>
+          <button type="button" class="choice risk" data-s="RISK">
+            <div class="ci"><i class="fa-solid fa-rocket"></i></div>
+            <b>Risk</b>
+            <small>8s queue · 3s offline gap.</small>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-foot">
+      <button class="btn btn-ghost" onclick="closeUpload()">Cancel</button>
+      <button class="btn btn-primary" id="up-go" onclick="submitUpload()"><i class="fa-solid fa-upload"></i> Upload accounts</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ADMIN ==================== -->
+<div class="overlay" id="adm-overlay">
+  <div class="modal wide">
+    <div class="modal-head">
+      <div class="m-ic"><i class="fa-solid fa-user-shield"></i></div>
+      <div><h3>Logins &amp; Limits</h3><p>Issue access for other operators</p></div>
+      <button class="x" onclick="closeAdmin()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="modal-body">
+      <p class="sub">Create a login</p>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Username</label>
+          <input id="in-auser" class="input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="ahmed">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div style="display:flex;gap:7px">
+            <input id="in-apass" class="input" autocomplete="off" spellcheck="false" placeholder="min 4 chars" style="flex:1;min-width:0">
+            <button type="button" class="btn btn-ghost" onclick="genPass()" title="Generate password" style="flex:none"><i class="fa-solid fa-dice"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Valid for (days)</label>
+          <input id="in-adays" class="input" inputmode="numeric" value="30" autocomplete="off">
+          <div class="hint">0 = never expires</div>
+        </div>
+        <div class="field">
+          <label>Max accounts</label>
+          <input id="in-aacc" class="input" inputmode="numeric" value="5" autocomplete="off">
+          <div class="hint">How many accounts this login may add</div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="adm-go" onclick="createUser()" style="width:100%;justify-content:center">
+        <i class="fa-solid fa-user-plus"></i> Create login
+      </button>
+
+      <p class="sub" style="margin-top:8px">Existing logins</p>
+      <div class="userlist" id="userlist"><p class="msg">Loading…</p></div>
+    </div>
+
+    <div class="modal-foot">
+      <button class="btn btn-ghost" onclick="closeAdmin()">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts"></div>
+
+<script src="/static/js/core.js?v=20261011a"></script>
+<script src="/static/js/dashboard.js?v=20261011a"></script>
+<script src="/static/js/admin.js?v=20261011a"></script>
+</body>
+</html>

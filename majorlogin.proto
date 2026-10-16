@@ -1,0 +1,129 @@
+syntax = "proto3";
+
+package majorlogin;
+
+// ---------------------------------------------------------------------------
+// Reverse-engineered from the FRUX MAJORLOGIN DUMP #13 capture
+//   UID 8001827346 / Region IND / 2026-10-04 05:25:15
+//   Server: https://loginbp.ppmainecoonghj.com/MajorLogin
+//
+// Wire format was confirmed by decrypting the captured request with
+// AES-128-CBC (key = b'Yg&tc%DEuh6%Zc^8', iv = b'6oyZDr22E3ychjM%') and
+// re-serialising it: the output is byte-identical to the original 1112 bytes.
+//
+// The response is prefixed with a 64-byte obfuscated header that must be
+// stripped before parsing the MajorLoginRes body.
+// ---------------------------------------------------------------------------
+
+message MajorLogin {
+  string event_time = 3;                    // unix seconds, as a string
+  string game_name = 4;
+  int32 platform_id = 5;
+  string client_version = 7;
+  string system_software = 8;
+  string system_hardware = 9;               // "Handheld"
+  string telecom_operator = 10;
+  string network_type = 11;
+  uint32 screen_width = 12;
+  uint32 screen_height = 13;
+  string screen_dpi = 14;
+  string processor_details = 15;
+  uint32 memory = 16;
+  string gpu_renderer = 17;
+  string gpu_version = 18;
+  string unique_device_id = 19;
+  string client_ip = 20;
+  string language = 21;
+  string open_id = 22;
+  string open_id_type = 23;                 // "4"
+  string device_type = 24;                  // "Handheld"
+
+  // Field 25 is device_model (a plain string) in the real client. The old
+  // thunderFF.proto declared a nested message here (memory_available), which
+  // collided with device_model and was therefore never sent on the wire.
+  string device_model = 25;
+
+  string region = 26;                       // "IN"
+  string access_token = 29;
+  int32 platform_sdk_id = 30;
+  string network_operator_a = 41;
+  string network_type_a = 42;
+  string client_using_version = 57;         // 32-char engine hash
+
+  int32 external_storage_total = 60;
+  int32 external_storage_available = 61;
+  int32 internal_storage_total = 62;
+  int32 internal_storage_available = 63;
+  int32 game_disk_storage_available = 64;
+  int32 game_disk_storage_total = 65;
+  int32 external_sdcard_avail_storage = 66;
+  int32 external_sdcard_total_storage = 67;
+
+  int32 field_70 = 70;                      // observed value 4
+
+  int32 login_by = 73;                      // 2 = guest/facebook-less flow
+  string library_path = 74;                 // .../lib/arm
+  int32 reg_avatar = 76;
+  string library_token = 77;                // "<md5>|.../base.apk"
+  int32 channel_type = 78;                  // 6
+  int32 cpu_type = 79;                      // 1 = 32-bit
+  string cpu_architecture = 81;             // "32"
+  string client_version_code = 83;          // "2019121227"
+  int32 field_85 = 85;                      // observed value 3
+  string graphics_api = 86;                 // "OpenGLES2"
+  uint32 supported_astc_bitset = 87;        // 3071
+  int32 login_open_id_type = 88;            // 4
+  bytes analytics_detail = 89;
+  uint32 loading_time = 92;
+  string release_channel = 93;              // "3rd_party"
+  string extra_info = 94;
+  uint32 android_engine_init_flag = 95;     // 111207
+  string extra_json = 96;                   // {"cur_rate":null,...}
+  int32 if_push = 97;
+  int32 is_vpn = 98;                        // absent => 0
+  string origin_platform_type = 99;         // "4"
+  string primary_platform_type = 100;       // "4"
+  bytes unknown_bytes_102 = 102;
+
+  int32 field_104 = 104;                    // observed 47591
+  int32 field_105 = 105;                    // observed 1
+  string field_106 = 106;                   // "<cdn>|<cdn>|<32-hex signature>"
+  string field_107 = 107;                   // 32-char hex
+}
+
+message LoginQueueInfo {
+  int32 queue_state = 1;                    // observed 1
+}
+
+message FFAntiConfigDesc {
+  string region = 1;                        // observed "IND"
+}
+
+message MajorLoginRes {
+  uint64 account_id = 1;
+  string lock_region = 2;                   // "IND"
+  string noti_region = 3;                   // "IND"
+  string ip_region = 4;                     // "IN"
+  string agora_environment = 5;             // "live"
+  string new_active_region = 6;
+  repeated string recommend_regions = 7;
+  string token = 8;                         // JWT
+  uint32 ttl = 9;                           // 28800 (tag 0x48)
+  string server_url = 10;                   // https://client.ind.freefiremobile.com
+  uint32 emulator_score = 12;
+  bytes blacklist = 13;
+  LoginQueueInfo queue_info = 15;
+  string tp_url = 16;
+  uint32 app_server_id = 17;
+  string ip_city = 19;                      // "Bengaluru"
+  string ip_subdivision = 20;               // "KA"
+  uint32 kts = 21;                          // 1791071715
+  bytes ak = 22;                            // 16-byte AES key
+  bytes aiv = 23;                           // 16-byte AES IV
+  string ffanti_url = 24;
+  FFAntiConfigDesc ff_anti_config_desc = 25;
+  string connection_seed = 27;              // 32 chars
+
+  // Some builds tag ttl as 3600 instead of 9; kept so neither is lost.
+  uint32 ttl_alt_3600 = 3600;
+}

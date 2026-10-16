@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="robots" content="noindex, nofollow">
+<title>Sign in — FreeFire Level Bot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="/static/css/tokens.css?v=20261011a">
+<link rel="stylesheet" href="/static/css/components.css?v=20261011a">
+<link rel="stylesheet" href="/static/css/login.css?v=20261011a">
+</head>
+<body class="login-body">
+
+<div class="login-orb a"></div>
+<div class="login-orb b"></div>
+
+<div class="login-card">
+  <div class="login-brand">
+    <div class="login-logo"><i class="fa-solid fa-bolt"></i></div>
+    <h1>FreeFire Level Bot</h1>
+    <p>Control Panel</p>
+    <span class="tagline"><i class="fa-solid fa-circle" style="font-size:6px"></i> Secure access</span>
+  </div>
+
+  <form id="login-form" class="login-form" onsubmit="return doLogin(event)">
+    <div class="field">
+      <label>Username</label>
+      <div class="input-group">
+        <i class="fa-solid fa-user"></i>
+        <input id="u" class="input" autocomplete="username" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="username">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Password</label>
+      <div class="input-group">
+        <i class="fa-solid fa-lock"></i>
+        <input id="p" class="input" type="password" autocomplete="current-password" placeholder="••••••••">
+        <button type="button" class="toggle" onclick="toggleEye()" tabindex="-1"><i id="eye-ic" class="fa-solid fa-eye"></i></button>
+      </div>
+    </div>
+
+    <!-- honeypot: invisible to people, autofill bots fill it and are rejected -->
+    <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+      <label for="hp">Leave this field empty</label>
+      <input id="hp" name="hp" type="text" tabindex="-1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+    </div>
+
+    <div class="login-err" id="err"><i class="fa-solid fa-triangle-exclamation"></i><span id="err-t"></span></div>
+
+    <button class="btn btn-primary" id="go" type="submit" style="width:100%;justify-content:center;padding:14px">
+      <i class="fa-solid fa-right-to-bracket"></i> Sign in
+    </button>
+  </form>
+
+  <div class="login-foot">
+    Accounts are issued by the administrator and expire automatically.
+  </div>
+</div>
+
+<script src="/static/js/login.js?v=20261011a"></script>
+</body>
+</html>
