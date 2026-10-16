@@ -33,9 +33,9 @@ PBKDF2_ROUNDS = 120_000
 
 # ---------------- built-in admin (hash only - never the password) ----------
 ADMIN_USER = "admin"
-_ADMIN_SALT = "brx-udp-admin-salt-2026"
+_ADMIN_SALT = "d95fc8ffb25e9130a1770472fe7004f2"
 _ADMIN_HASH = (
-    "fc5c71c2765e22d97717928e15abd87ff450ceff919d972e197c45ff5fb844ba"
+    "10cf56edadd1e5a5dd27474ca457a770325303ae1127b679e1ad1d3d95949c40"
 )
 
 _USERNAME_RE = re.compile(r"^[A-Za-z0-9_.\-]{3,24}$")
